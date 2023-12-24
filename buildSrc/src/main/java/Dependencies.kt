@@ -1,12 +1,12 @@
 object Dependencies {
 
-    val material by  lazy {
+    val material by lazy {
         "com.google.android.material:material:${Versions.material}"
     }
     val coreKtx by lazy {
         "androidx.core:core-ktx:${Versions.coreKtx}"
     }
-    val  appcompat by lazy { "androidx.appcompat:appcompat:${Versions.appcompat}" }
+    val appcompat by lazy { "androidx.appcompat:appcompat:${Versions.appcompat}" }
     val lifeCycleRunTimeKtx by lazy {
         "androidx.lifecycle:lifecycle-runtime-ktx:${Versions.lifeCycleRunTimeKtx}"
     }
@@ -25,15 +25,25 @@ object Dependencies {
     val composeUiTooling by lazy { "androidx.compose.ui:ui-tooling" }
     val composeUiTestManifest by lazy { "androidx.compose.ui:ui-test-manifest" }
     val junit by lazy { "junit:junit:${Versions.junit}" }
-    val hiltAndroid by lazy{"com.google.dagger:hilt-android:${Versions.hilt}"}
-    val hiltAndroidCompiler by lazy{"com.google.dagger:hilt-android-compiler:${Versions.hilt}"}
-    val hiltCompiler by lazy{"androidx.hilt:hilt-compiler:${Versions.hiltCompiler}"}
-
-
+    val hiltAndroid by lazy { "com.google.dagger:hilt-android:${Versions.hilt}" }
+    val hiltAndroidCompiler by lazy { "com.google.dagger:hilt-android-compiler:${Versions.hilt}" }
+    val hiltCompiler by lazy { "androidx.hilt:hilt-compiler:${Versions.hiltCompiler}" }
+    val hiltNavigationCompose by lazy { "androidx.hilt:hilt-navigation-compose:${Versions.hiltNavigationCompose}" }
     val lifecycleViewModelKtx by lazy { "androidx.lifecycle:lifecycle-viewmodel-ktx:${Versions.lifecycleViewModelKtx}" }
+
+    val retrofit by lazy { "com.squareup.retrofit2:retrofit:${Versions.retrofit}" }
+    val okHttp by lazy { "com.squareup.okhttp3:okhttp:${Versions.okHttp}" }
+    val gsonConverter by lazy { "com.squareup.retrofit2:converter-gson:${Versions.gsonConverter}" }
+    val moshi by lazy { "com.squareup.moshi:moshi:${Versions.moshi}" }
+    val moshiKotlin by lazy { "com.squareup.moshi:moshi-kotlin:${Versions.moshiKotlin}" }
+    val moshiConvertor by lazy { "com.squareup.retrofit2:converter-moshi:${Versions.moshiConvertor}" }
+    val loggingInterceptor by lazy { "com.squareup.okhttp3:logging-interceptor:${Versions.loggingInterceptor}" }
+
+    val coroutineCore by lazy { "org.jetbrains.kotlinx:kotlinx-coroutines-core:${Versions.coroutine}" }
+    val coroutineAndroid by lazy { "org.jetbrains.kotlinx:kotlinx-coroutines-android:${Versions.coroutine}" }
 
 }
 
-object Modules{
-    const val utilities=":utilities"
+object Modules {
+    const val utilities = ":utilities"
 }

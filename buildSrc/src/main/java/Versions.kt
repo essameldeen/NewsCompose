@@ -11,4 +11,13 @@ object Versions {
     const val material = "1.9.0"
     const val hilt = "2.48"
     const val hiltCompiler = "1.1.0"
+    const val hiltNavigationCompose = "1.1.0"
+    const val retrofit = "2.9.0"
+    const val okHttp = "5.0.0-alpha.2"
+    const val gsonConverter = "2.9.0"
+    const val moshi = "1.13.0"
+    const val moshiKotlin = "1.14.0"
+    const val moshiConvertor = "2.9.0"
+    const val loggingInterceptor = "4.8.1"
+    const val coroutine = "1.7.3"
 }

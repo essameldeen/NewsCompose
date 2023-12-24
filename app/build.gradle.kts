@@ -61,10 +61,22 @@ dependencies {
     implementation(Dependencies.composeUiGraphic)
     implementation(Dependencies.composeUiToolingPreview)
     implementation(Dependencies.composeMaterial3)
-    
+
     implementation(Dependencies.hiltAndroid)
     kapt(Dependencies.hiltCompiler)
     kapt(Dependencies.hiltAndroidCompiler)
+    implementation(Dependencies.hiltNavigationCompose)
+
+    implementation(Dependencies.retrofit)
+    implementation(Dependencies.moshi)
+    implementation(Dependencies.moshiConvertor)
+    implementation(Dependencies.moshiKotlin)
+    implementation(Dependencies.gsonConverter)
+    implementation(Dependencies.okHttp)
+    implementation(Dependencies.loggingInterceptor)
+    implementation(Dependencies.coroutineCore)
+    implementation(Dependencies.coroutineAndroid)
+
 
 
     implementation(project(Modules.utilities))
