@@ -43,7 +43,7 @@ fun Loader() {
 }
 
 @Composable
-fun NewsList(response: NewsResponse) {
+fun NewsList(response: NewsResponse, page: Int) {
     LazyColumn {
 
 
