@@ -2,4 +2,10 @@
 <resources>
 
     <style name="Theme.NewsCompose" parent="android:Theme.Material.Light.NoActionBar" />
+
+    <style name="SplashScreenThem" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/white</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/logo</item>
+        <item name="postSplashScreenTheme">@style/Theme.NewsCompose</item>
+    </style>
 </resources>

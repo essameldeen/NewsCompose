@@ -2,6 +2,9 @@ package com.example.newscompose.di
 
 import com.example.newscompose.data.AppConstants
 import com.example.newscompose.data.api.NewsService
+import com.example.newscompose.data.datasource.NewsDataSourceImpl
+import com.example.newscompose.data.datasource.NewsDatasource
+import com.example.newscompose.ui.repository.NewsRepository
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import dagger.Module
@@ -23,7 +26,7 @@ class AppModule {
     @Singleton
     fun provideRetrofit(): Retrofit {
         val httpLoggingInterceptor = HttpLoggingInterceptor().apply {
-            level = HttpLoggingInterceptor.Level.BASIC
+            level = HttpLoggingInterceptor.Level.BODY
         }
         val httpClient = OkHttpClient().newBuilder().apply {
             addInterceptor(httpLoggingInterceptor)
@@ -41,5 +44,18 @@ class AppModule {
     @Singleton
     fun provideNewApiService(retrofit: Retrofit): NewsService {
         return retrofit.create(NewsService::class.java)
+    }
+
+
+    @Provides
+    @Singleton
+    fun provideNewsDataSource(newsService: NewsService): NewsDatasource {
+        return NewsDataSourceImpl(newsService)
+    }
+
+    @Provides
+    @Singleton
+    fun provideNewRepository(datasource: NewsDatasource): NewsRepository {
+        return NewsRepository(datasource)
     }
 }

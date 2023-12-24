@@ -20,4 +20,5 @@ object Versions {
     const val moshiConvertor = "2.9.0"
     const val loggingInterceptor = "4.8.1"
     const val coroutine = "1.7.3"
+    const val splashScreen = "1.0.1"
 }
