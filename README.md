@@ -1,5 +1,6 @@
-**This (News App) is a Android Project**
- *built using the best practices: 
+**This (News App) is a Android Project** 
+
+ built using the best practices: 
 ✨ Jetpack Compose for UI
 🌿 UI + DATA + DI Layers.
 🏗️ MVVM + Modular Architecture
