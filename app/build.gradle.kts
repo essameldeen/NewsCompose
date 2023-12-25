@@ -77,6 +77,8 @@ dependencies {
     implementation(Dependencies.coroutineCore)
     implementation(Dependencies.coroutineAndroid)
     implementation(Dependencies.splashScreen)
+    implementation(Dependencies.coil)
+
 
 
 

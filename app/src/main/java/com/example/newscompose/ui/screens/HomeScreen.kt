@@ -13,7 +13,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.example.newscompose.ui.components.Loader
-import com.example.newscompose.ui.components.NewsList
+import com.example.newscompose.ui.components.NewsRowComponent
 import com.example.newscompose.ui.components.TextNormalCompose
 import com.example.newscompose.ui.viewmodels.NewsViewModel
 import com.example.utilities.ResourceState
@@ -47,7 +47,10 @@ fun HomeScreen(
 
             is ResourceState.Success -> {
                 val response = (state as ResourceState.Success).data
-                NewsList(response, page)
+                //NewsList(response, page)
+                if (response.articles.isNotEmpty()) {
+                    NewsRowComponent(page = page, article = response.articles[page])
+                }
             }
 
             is ResourceState.Error -> {
